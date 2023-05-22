@@ -47,25 +47,38 @@ _class: lead invert
 # Terminology
 
 - K8s - Kubernetes
-- AKS - Azure's Managed Kubernetes service
+- AKS - Azure Kubernetes Service
 - PX - Portworx
 - SP - Service Principal
 - MI - Managed Identity
 
 ---
 
-# Kubernetes on Azure
+# Portworx Permutations
+
+## Kubernetes on Azure
 
 - Self-Managed
 - Cluster API / Cluster API for Azure (CAPI / CAPZ)
 - Azure Kubernetes Service (AKS)
 
-# Portworx Products
+## Portworx Products
 
 - Portworx Essentials
 - Portworx Enterprise
 - Portworx Backup
 - Portworx Data Services - DBaaS
+
+---
+
+# Azure Kubernetes Service
+
+![width:800px](img/aks.png)
+
+---
+# Azure Kubernetes Service
+
+![width:800px](img/aks-2.png)
 
 ---
 
