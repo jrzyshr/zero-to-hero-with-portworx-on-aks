@@ -1,25 +1,19 @@
 ---
+theme: microsoft
 marp: true
 paginate: true
-style: |
-    section.lead {
-        background-color: #243a5e;
-    }
-    section.lead h1 {
-      color: white;
-    }
-    section.lead h2 {
-      color: white;
-    }
+header: ![](img/microsoft-azure-logo-1.png)
 
 ---
-<!--
-_class: lead invert
+
+<!-- 
+_class: intro-blue 
+_header: ![]()
 -->
 
+# &nbsp;
 # Zero to Hero with Portworx on AKS
-
-### Presented by: Tommy Falgout | Cloud Solution Architect
+### Tommy Falgout | Cloud Solution Architect
 
 ---
 
@@ -40,7 +34,7 @@ _class: lead invert
 - Builder of trebuchets (IMDB - Trebuchet Expert)
 - And amazingly enough, Dad (13 yo daughter)
 
-![width:800px](https://planomagazine.com/wp-content/uploads/2015/09/SLINGFEST-DFW-TREBUCHET-CATAPULT-PLANO-MAGAZINE-SLIDESHOW.jpg)
+![bg right:50% w:500](https://planomagazine.com/wp-content/uploads/2015/09/SLINGFEST-DFW-TREBUCHET-CATAPULT-PLANO-MAGAZINE-SLIDESHOW.jpg)
 
 ---
 
@@ -183,10 +177,9 @@ Part of K8s Apps in MP.
 Can deploy directly into AKS Cluster
 -->
 
-![width:700px](img/portworx-marketplace.png)
+![width:800px](img/portworx-marketplace.png)
+![bg right:30% w:300](img/marketplace-qr-code.png)
 
-TODO:
-- QR Code?
 ---
 
 # Q&A
