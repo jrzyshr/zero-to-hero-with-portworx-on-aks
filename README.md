@@ -44,17 +44,19 @@ _class: lead invert
 
 ---
 
-# Terminology
+# Assumptions and Acronyms
 
-- K8s - Kubernetes
-- AKS - Azure Kubernetes Service
-- PX - Portworx
-- SP - Service Principal
-- MI - Managed Identity
+100 level of:
+- Azure
+- Kubernetes (K8s)
+- Portworx (PX)
+- Azure Kubernetes Service (AKS)
+- Service Principal (SP)
+- Managed Identity (MI)
 
 ---
 
-# Portworx Permutations
+# Portworx in Azure Permutations
 
 ## Kubernetes on Azure
 
@@ -62,12 +64,11 @@ _class: lead invert
 - Cluster API / Cluster API for Azure (CAPI / CAPZ)
 - Azure Kubernetes Service (AKS)
 
-## Portworx Products
+## Portworx Platform
 
-- Portworx Essentials
-- Portworx Enterprise
-- Portworx Backup
-- Portworx Data Services - DBaaS
+- Storage Services
+- Backup Services
+- Data Services - DBaaS
 
 ---
 
@@ -87,7 +88,6 @@ _class: lead invert
 - K8s storage platform
 - Enterprise grade
 - Unlimited volumes
-- Free 30 day trial
 - Use Cases
   - DBaaS
   - SaaS with storage
@@ -107,10 +107,11 @@ _class: lead invert
 
 # Data Services
 
+- Microsoft SQL Server (recently announced)
 - Kafka
-- Elastic
+- Elasticsearch
 - Cassandra
-- TensorFlow
+- MongoDB
 - PostgreSQL
 - MySQL
 - and more
@@ -146,12 +147,46 @@ Ref: https://docs.portworx.com/install-portworx/kubernetes/azure/aks/#install-po
 
 NOTES:
 - Should just need to change SC
-- Show screenshots of Azure Portal with added resources
+
+TODO:
+- screenshots/cast + walkthrough
 
 ---
 
-# Scenario: ???
+# Scenario: Storage Optimization
 
+NOTES:
+- Thin provisioning
+  - Allocate 5G for Storage
+  - Set Autopilot
+
+TODO:
+- screenshots/cast + walkthrough
+
+---
+
+# Scenario: BC/DR
+
+NOTES:
+- Fail over to separate Region
+- Fail over from local env to Cloud
+
+TODO:
+- screenshots/cast + walkthrough
+
+---
+
+# Azure Marketplace
+
+<!-- 
+Part of K8s Apps in MP.  
+Can deploy directly into AKS Cluster
+-->
+
+![width:700px](img/portworx-marketplace.png)
+
+TODO:
+- QR Code?
 ---
 
 # Q&A
