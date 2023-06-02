@@ -8,7 +8,7 @@ header: ![](img/microsoft-azure-logo-1.png)
 
 <!-- 
 _class: intro-blue 
-_header: ![]()
+_header: ![](img/microsoft-azure-logo-2.png)
 -->
 
 # &nbsp;
@@ -27,14 +27,13 @@ _header: ![]()
 - Q&A
 
 ---
-
 # Me
 
 - Cloud Solution Architect @ Microsoft (ex-Yahoo!, ex-Nortel)
 - Builder of trebuchets (IMDB - Trebuchet Expert)
 - And amazingly enough, Dad (13 yo daughter)
 
-![bg right:50% w:500](https://planomagazine.com/wp-content/uploads/2015/09/SLINGFEST-DFW-TREBUCHET-CATAPULT-PLANO-MAGAZINE-SLIDESHOW.jpg)
+![bg right:50% w:600](https://planomagazine.com/wp-content/uploads/2015/09/SLINGFEST-DFW-TREBUCHET-CATAPULT-PLANO-MAGAZINE-SLIDESHOW.jpg)
 
 ---
 
@@ -47,6 +46,25 @@ _header: ![]()
 - Azure Kubernetes Service (AKS)
 - Service Principal (SP)
 - Managed Identity (MI)
+
+---
+
+![](img/why-k8s.png)
+
+---
+
+![](img/why-aks.png)
+
+---
+
+# Azure Kubernetes Service
+
+![width:800px](img/aks.png)
+
+---
+# Azure Kubernetes Service
+
+![width:800px](img/aks-2.png)
 
 ---
 
@@ -63,17 +81,6 @@ _header: ![]()
 - Storage Services
 - Backup Services
 - Data Services - DBaaS
-
----
-
-# Azure Kubernetes Service
-
-![width:800px](img/aks.png)
-
----
-# Azure Kubernetes Service
-
-![width:800px](img/aks-2.png)
 
 ---
 
@@ -125,7 +132,7 @@ OBJ_ID=$(az aks show -g portworx-aks -n portworx-aks --query identityProfile.kub
 az aks show -g portworx-aks -n portworx-aks --query nodeResourceGroup
 MC_RG=$(az aks show -g portworx-aks -n portworx-aks --query nodeResourceGroup --output tsv)
 az role assignment create --assignee-object-id $OBJ_ID --role "Contributor" --resource-group $MC_RG # 5 sec
-kubectl create secret generic -n kube-system px-azure --from-literal=AZURE_CLIENT_ID=$CLIENT_ID
+kubectl create secret generic -n portworx px-azure --from-literal=AZURE_CLIENT_ID=$CLIENT_ID
 
 # Install Portworx Operator + spec as per UI Instructions
 kubectl apply -f 'https://install.portworx.com/2.13?comp=pxoperator&kbver=1.25.6&ns=portworx'
@@ -139,8 +146,12 @@ Ref: https://docs.portworx.com/install-portworx/kubernetes/azure/aks/#install-po
 
 # Scenario: Wordpress on AKS + PX
 
-NOTES:
-- Should just need to change SC
+## 43% of all websites on internet are built on Wordpress
+
+```
+helm repo add bitnami https://charts.bitnami.com/bitnami
+helm install px-wordpress bitnami/wordpress --set global.storageClass=px-csi-db
+```
 
 TODO:
 - screenshots/cast + walkthrough
@@ -181,5 +192,17 @@ Can deploy directly into AKS Cluster
 ![bg right:30% w:300](img/marketplace-qr-code.png)
 
 ---
+<!-- 
+_class: intro-blue centered
+_header: ![](img/microsoft-azure-logo-2.png)
+-->
 
-# Q&A
+# Q & A
+
+---
+<!-- 
+_class: intro-blue centered
+_header: ![](img/microsoft-azure-logo-2.png)
+-->
+
+# Thank you

@@ -31,6 +31,10 @@ section.intro-blue {
   color: white;
 }
 
+section.intro-blue img {
+  background-color: #0078d3;
+}
+
 section.intro-blue h1 {
   color: white;
   line-height: 100.4px;
@@ -61,4 +65,8 @@ section.intro-white h2 {
   color: black;
   line-height: 1.4px;
   font-size: 12em;
+}
+
+section.centered h1 {
+  text-align: center;
 }
