@@ -44,8 +44,6 @@ _header: ![](img/microsoft-azure-logo-2.png)
 - Kubernetes (K8s)
 - Portworx (PX)
 - Azure Kubernetes Service (AKS)
-- Service Principal (SP)
-- Managed Identity (MI)
 
 ---
 
@@ -68,39 +66,26 @@ _header: ![](img/microsoft-azure-logo-2.png)
 
 ---
 
-# Portworx in Azure Permutations
-
-## Kubernetes on Azure
-
-- Self-Managed
-- Cluster API / Cluster API for Azure (CAPI / CAPZ)
-- Azure Kubernetes Service (AKS)
-
-## Portworx Platform
-
-- Storage Services
-- Backup Services
-- Data Services - DBaaS
-
----
 
 # Portworx Enterprise
 
+![bg right:50% width:600](img/portworx-overview-2.png)
+
 - K8s storage platform
 - Enterprise grade
-- Unlimited volumes
 - Use Cases
   - DBaaS
   - SaaS with storage
   - Disaster Recovery
   - Cross-Cloud Migration
+
 ---
 
 # Benefits of PX on AKS
 
+![bg right:50% width:600](img/portworx-bcdr.png)
+
 - Enterprise grade storage platform and managed K8s
-- Support Mission critical data support
-- Storage pool across clouds
 - Storage configuration at pod level to meet SLA
 - Backup and migrate across k8s clusters or even clouds!
 
@@ -119,9 +104,10 @@ _header: ![](img/microsoft-azure-logo-2.png)
 
 ---
 
-# Install steps
+# Install steps (0 to Hero steps)
 
 ```
+# Create AKS Cluster
 az group create -n portworx-aks -l southcentralus # 3sec
 az aks create -g portworx-aks -n portworx-aks --enable-managed-identity # 3min
 az aks get-credentials -g portworx-aks -n portworx-aks # 2sec
@@ -144,43 +130,73 @@ Ref: https://docs.portworx.com/install-portworx/kubernetes/azure/aks/#install-po
 
 ---
 
+# AKS + Portworx Architecture
+
+![bg right:65% width:800](img/portworx.png)
+
+---
+
 # Scenario: Wordpress on AKS + PX
 
-## 43% of all websites on internet are built on Wordpress
+### 43% of all websites on internet are built on Wordpress
 
+```
+Source: https://www.manaferra.com/wordpress-statistics
+```
+
+### Instructions
 ```
 helm repo add bitnami https://charts.bitnami.com/bitnami
-helm install px-wordpress bitnami/wordpress --set global.storageClass=px-csi-db
+helm install px-wordpress bitnami/wordpress \
+  --set global.storageClass=px-csi-db
 ```
 
-TODO:
-- screenshots/cast + walkthrough
+![bg right:65% width:800](img/portworx-wordpress.png)
 
 ---
 
-# Scenario: Storage Optimization
+# Scenario++: Storage Optimization
 
-NOTES:
-- Thin provisioning
-  - Allocate 5G for Storage
-  - Set Autopilot
+![bg right:65% width:800](https://docs.portworx.com/img/autopilot-overview.gif)
 
-TODO:
-- screenshots/cast + walkthrough
+### Autopilot
+- Save on storage costs
+- Auto-rescale Portworx storage pools + PVC
 
----
-
-# Scenario: BC/DR
-
-NOTES:
-- Fail over to separate Region
-- Fail over from local env to Cloud
-
-TODO:
-- screenshots/cast + walkthrough
+<!-- 
+Examples:
+- Your WP website takes off and people start uploading content, but you only allocated 10G.  Can auto-upgrade to 100G
+-->
 
 ---
 
+# Scenario++: Backup / Disaster Recovery
+
+![bg right:65% width:800](img/azure-reliability.png)
+
+
+Resiliency comes in many flavors:
+- VM failure
+- DC / Region Failure
+- Application failure / corruption
+
+<!--
+Backup is NOT Disaster Recovery
+-->
+
+---
+
+# Scenario++: Backup / Disaster Recovery
+
+### Portworx Backup
+![bg right:65% width:680](img/portworx-bcdr-2.png)
+
+- Region fail over
+- X-cloud or on-prem fail over
+- Recovery from snapshop
+<!--
+-->
+---
 # Azure Marketplace
 
 <!-- 
@@ -192,6 +208,22 @@ Can deploy directly into AKS Cluster
 ![bg right:30% w:300](img/marketplace-qr-code.png)
 
 ---
+
+# Azure Marketplace - K8s Apps
+
+<!-- 
+Part of K8s Apps in MP.  
+Can deploy directly into AKS Cluster
+-->
+
+![bg right:65% width:700](img/k8s-apps-portworx.png)
+
+
+- New Marketplace Offer
+- Deploy into AKS 
+- Launch Partner: Portworx
+ 
+---
 <!-- 
 _class: intro-blue centered
 _header: ![](img/microsoft-azure-logo-2.png)
@@ -201,8 +233,10 @@ _header: ![](img/microsoft-azure-logo-2.png)
 
 ---
 <!-- 
-_class: intro-blue centered
-_header: ![](img/microsoft-azure-logo-2.png)
+_class: centered
+_footer: https://lastcoolnameleft.github.io/zero-to-hero-with-portworx-on-aks/
 -->
 
 # Thank you
+
+
