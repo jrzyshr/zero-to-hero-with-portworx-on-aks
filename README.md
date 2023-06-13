@@ -153,6 +153,10 @@ helm install px-wordpress bitnami/wordpress \
 
 ![bg right:65% width:800](img/portworx-wordpress.png)
 
+<!--
+Example:  Create a company offering WP as a Service.
+Want to offer 1TB of storage to each customer
+-->
 ---
 
 # Scenario++: Storage Optimization
@@ -165,23 +169,7 @@ helm install px-wordpress bitnami/wordpress \
 
 <!-- 
 Examples:
-- Your WP website takes off and people start uploading content, but you only allocated 10G.  Can auto-upgrade to 100G
--->
-
----
-
-# Scenario++: Backup / Disaster Recovery
-
-![bg right:65% width:800](img/azure-reliability.png)
-
-
-Resiliency comes in many flavors:
-- VM failure
-- DC / Region Failure
-- Application failure / corruption
-
-<!--
-Backup is NOT Disaster Recovery
+- Your WP website takes off and people start uploading content, Allocated 1TB, but many customers only using 10GB.
 -->
 
 ---
@@ -195,6 +183,7 @@ Backup is NOT Disaster Recovery
 - X-cloud or on-prem fail over
 - Recovery from snapshop
 <!--
+Backup is NOT Disaster Recovery
 -->
 ---
 # Azure Marketplace
@@ -239,4 +228,5 @@ _footer: https://lastcoolnameleft.github.io/zero-to-hero-with-portworx-on-aks/
 
 # Thank you
 
+![bg right:30% w:300](img/preso-qr-code.png)
 
