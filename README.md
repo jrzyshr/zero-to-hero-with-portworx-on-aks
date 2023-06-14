@@ -176,7 +176,7 @@ Examples:
 
 # Scenario++: Backup / Disaster Recovery
 
-### Portworx Backup
+### Portworx Platform
 ![bg right:65% width:680](img/portworx-bcdr-2.png)
 
 - Region fail over
