@@ -161,7 +161,7 @@ Want to offer 1TB of storage to each customer
 
 # Scenario++: Storage Optimization
 
-![bg right:65% width:800](https://docs.portworx.com/assets/images/autopilot-overview-20cbb7be90d4981984165b911be90f88.gif)
+![bg right:65% width:800](img/portworx-autopilot.gif)
 
 ### Autopilot
 - Save on storage costs
