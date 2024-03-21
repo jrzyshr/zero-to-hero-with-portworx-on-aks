@@ -14,7 +14,6 @@ _header: ![](img/microsoft-azure-logo-2.png)
 # &nbsp;
 # Zero to Hero with Portworx on AKS
 ### Peter Laudati | Cloud Solution Architect
-### Tommy Falgout | Cloud Solution Architect
 #### Microsoft Corporation
 
 ![bg right:25% w:500](img/20240320_164227949_iOS.jpeg)
@@ -33,9 +32,12 @@ _header: ![](img/microsoft-azure-logo-2.png)
 ---
 # Me
 
-- Cloud Solution Architect @ Microsoft (ex-Yahoo!, ex-Nortel)
-- Builder of trebuchets (IMDB - Trebuchet Expert)
-- And amazingly enough, Dad (13 yo daughter)
+- Cloud Solution Architect @ Microsoft
+  - (helping partners build solutions on Azure since 2009!)
+- Always mixing business with fun
+  - (at Mont St Michel this past weekend)
+- On a challenge to eat a meal in all 564 towns in New Jersey!
+  - https://bit.ly/eatjersey
 
 ![bg right:50% w:600](img/20240318_145546787_iOS.jpeg)
 
