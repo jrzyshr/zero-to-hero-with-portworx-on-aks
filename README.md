@@ -263,16 +263,8 @@ Can deploy directly into AKS Cluster
  
 ---
 <!-- 
-_class: intro-blue centered
-_header: ![](img/microsoft-azure-logo-2.png)
--->
-
-# Q & A
-
----
-<!-- 
 _class: centered
-_footer: https://lastcoolnameleft.github.io/zero-to-hero-with-portworx-on-aks/
+_footer: Slides by Tommy Falgout: https://lastcoolnameleft.github.io/zero-to-hero-with-portworx-on-aks/
 -->
 
 # Thank you
