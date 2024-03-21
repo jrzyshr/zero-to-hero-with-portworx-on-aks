@@ -38,7 +38,7 @@ _header: ![](img/microsoft-azure-logo-2.png)
 - On a challenge to eat a meal in all 564 towns in New Jersey!
   - https://bit.ly/eatjersey
 
-![bg right:40% w:600](img/NJ-StMichel.jpg)
+![bg right:45% w:600](img/NJ-StMichel.jpg)
 
 ---
 
