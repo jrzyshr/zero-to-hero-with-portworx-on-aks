@@ -33,9 +33,8 @@ _header: ![](img/microsoft-azure-logo-2.png)
 # Me
 
 - Cloud Solution Architect @ Microsoft
-  - *Helping build solutions on Azure since 2009!*
-- Always mixing business with fun
-  - Mont St Michel on Monday =>
+  - *Building Azure solutions since 2009!*
+- Always mixing business with fun =>
 - On a challenge to eat a meal in all 564 towns in New Jersey!
   - https://bit.ly/eatjersey
 
