@@ -17,7 +17,7 @@ _header: ![](img/microsoft-azure-logo-2.png)
 ### Tommy Falgout | Cloud Solution Architect
 ### Microsoft Corporation
 
-![bg right:50% w:600](img/20240318_145546787_iOS.jpeg)
+![bg right:50% w:600](img/20240320_164227949_iOS.jpeg)
 
 ---
 
@@ -37,7 +37,7 @@ _header: ![](img/microsoft-azure-logo-2.png)
 - Builder of trebuchets (IMDB - Trebuchet Expert)
 - And amazingly enough, Dad (13 yo daughter)
 
-![bg right:50% w:600](https://planomagazine.com/wp-content/uploads/2015/09/SLINGFEST-DFW-TREBUCHET-CATAPULT-PLANO-MAGAZINE-SLIDESHOW.jpg)
+![bg right:50% w:600](img/20240318_145546787_iOS.jpeg)
 
 ---
 
