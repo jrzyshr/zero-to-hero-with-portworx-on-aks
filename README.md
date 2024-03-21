@@ -65,6 +65,11 @@ _header: ![](img/microsoft-azure-logo-2.png)
 
 ---
 
+<!-- 
+_class: centered
+_footer: What The Hack - Intro to Kubernetes: https://aka.ms/wthintrotoaks
+-->
+
 # Azure Kubernetes Service
 
 ![width:800px](img/aks.png)
