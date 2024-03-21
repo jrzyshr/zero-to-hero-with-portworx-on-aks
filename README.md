@@ -17,7 +17,7 @@ _header: ![](img/microsoft-azure-logo-2.png)
 ### Tommy Falgout | Cloud Solution Architect
 #### Microsoft Corporation
 
-![bg right:50% w:300](img/20240320_164227949_iOS.jpeg)
+![bg right:25% w:500](img/20240320_164227949_iOS.jpeg)
 
 ---
 
