@@ -54,9 +54,14 @@ _header: ![](img/microsoft-azure-logo-2.png)
 
 ![](img/why-k8s.png)
 
+<!-- Do I really need to say this here in front of this crowd?! -->
+<!-- We've gone FROM: Kubernetes being the shiny new toy.. -->
+<!-- TO: WOW!  Kubernetes is 10 years old and almost everyone is using it! -->
 ---
 
 ![](img/why-aks.png)
+
+<!-- Since AKS came out in August 2018, it's become one of Microsoft's fastest growing services -->
 
 ---
 
@@ -64,11 +69,24 @@ _header: ![](img/microsoft-azure-logo-2.png)
 
 ![width:800px](img/aks.png)
 
+<!-- No matter how much we may be impressed with our knowledge of K8S.  -->
+<!-- K8S is COMPLEX! -->
+<!-- That's why, even with K8S at 10 years old and AKS at 7 years old, one of the most popular hackathons I run with my customers is the "Intro To Kubernetes" -->
+<!-- It's where we introduce the entire concept of K8S, being a container orchestrator with its own jargon and vocabulary -- nodes, pods, services, ingress, and so on -->
+
 ---
 # Azure Kubernetes Service
 
 ![width:800px](img/aks-2.png)
 
+<!-- AKS, as a managed service, makes Kubernetes easier. -->
+<!-- Over the years, it's gotten easier and easier with more of the operational tasks needed to manage a cluster being automated or simplified -->
+
+<!-- One thing that's STILL a bit tricky on K8S is storage. -->
+<!-- K8S was designed as a stateless platform, but that hasn't stopped people from hosting stateful workloads on it. -->
+<!-- On Azure alone, there are at least 5 different ways of handling storage -->
+<!-- You have to manage storage performance, redundancy, and worry about things like which nodes storage is attached to, or which availability zone storage is in, etc -->
+<!-- This is TOO complex -->
 ---
 
 
@@ -84,6 +102,9 @@ _header: ![](img/microsoft-azure-logo-2.png)
   - Disaster Recovery
   - Cross-Cloud Migration
 
+<!-- Introducing PortWorx -->
+<!-- PortWorx makes handling storage of enterprise work loads EASY -->
+<!-- all of those K8S storage complexities I mentioned are handled by PortWorx -->
 ---
 
 # Benefits of PX on AKS
@@ -94,6 +115,8 @@ _header: ![](img/microsoft-azure-logo-2.png)
 - Storage configuration at pod level to meet SLA
 - Backup and migrate across k8s clusters or even clouds!
 
+<!-- With PortWorx on AKS, you get the addition of "managed storage" on your "managed K8S cluster" -->
+<!-- Now you can configure storage at the pod-level and get the flexibility of managing it via the PortWorx -->
 ---
 
 # Data Services
@@ -107,6 +130,9 @@ _header: ![](img/microsoft-azure-logo-2.png)
 - MySQL
 - and more
 
+<!-- When I first started using K8S, folks told me... NEVER try running a Database in K8S, it's not designed for that. -->
+<!-- Well, now you can! -->
+<!-- PortWorx has built in support for running enterprise database workloads, including all of the ones listed here -->
 ---
 
 # Install steps (0 to Hero steps)
@@ -133,11 +159,21 @@ kubectl apply -f 'https://install.portworx.com/2.13?comp=pxoperator&kbver=1.25.6
 
 Ref: https://docs.portworx.com/install-portworx/kubernetes/azure/aks/#install-portworx-on-aks-using-the-operator
 
+<!-- Installing PortWorx on your AKS cluster is a breeze -->
+<!-- (if you're good at copy/edit/pasting) -->
+<!-- Here's a sample of the Azure CLI code to get you going -->
+<!-- This deploys an AKS cluster, creates a managed identity for PortWorx, and then installs the PortWorx operator onto your cluster -->
+<!-- After this, new PortWorx storage classes will show up in your cluster, and you can configure PVCs in your pod's YAML files -->
+
 ---
 
 # AKS + Portworx Architecture
 
 ![bg right:65% width:800](img/portworx.png)
+
+<!-- PortWorx operator creates/manages actual Azure storage resources behind the scenes -->
+<!-- The operator then exposes that storage via a set of K8S StorageClasses -->
+<!-- Applications can then use those storage classes and not have to worry about how they work under the covers -->
 
 ---
 
@@ -159,6 +195,9 @@ helm install px-wordpress bitnami/wordpress \
 ![bg right:65% width:800](img/portworx-wordpress.png)
 
 <!--
+
+
+WordPress is pretty popular.  Let's use it as an example of what you can do with PortWorx.
 Example:  Create a company offering WP as a Service.
 Want to offer 1TB of storage to each customer
 -->
@@ -175,6 +214,9 @@ Want to offer 1TB of storage to each customer
 <!-- 
 Examples:
 - Your WP website takes off and people start uploading content, Allocated 1TB, but many customers only using 10GB.
+
+PortWorx can optimize your storage usage by auto-magically scaling up/down as needed!
+It does this based on the observability metrics it collects.
 -->
 
 ---
@@ -188,7 +230,9 @@ Examples:
 - X-cloud or on-prem fail over
 - Recovery from snapshop
 <!--
-Backup is NOT Disaster Recovery
+PortWorx can handle all sorts of failover scenarios... whether between regions in Azure, or cross-cloud, or on-Prem!
+it also handles back up.
+REMINDER: Backup is NOT Disaster Recovery
 -->
 ---
 # Azure Marketplace
