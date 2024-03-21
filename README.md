@@ -13,7 +13,11 @@ _header: ![](img/microsoft-azure-logo-2.png)
 
 # &nbsp;
 # Zero to Hero with Portworx on AKS
+### Peter Laudati | Cloud Solution Architect
 ### Tommy Falgout | Cloud Solution Architect
+### Microsoft Corporation
+
+![bg right:50% w:600](https://planomagazine.com/wp-content/uploads/2015/09/SLINGFEST-DFW-TREBUCHET-CATAPULT-PLANO-MAGAZINE-SLIDESHOW.jpg)
 
 ---
 
